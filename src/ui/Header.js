@@ -6,6 +6,7 @@ const HeaderContainer = styled.header`
   padding: 0.5rem 0.5rem 0 0.5rem;
   background: #264563;
   display: flex;
+  justify-content: space-between;
 `;
 
 const LogoDiv = styled.div``;
@@ -18,6 +19,14 @@ const LogoImage = styled.img`
   width: 20%;
   height: auto;
   vertical-align: middle;
+`;
+
+const HamburgerContainer = styled.div``;
+
+const HamburgerButton = styled.button`
+  background: transparent;
+  display: flex;
+  flex-direction: column;
 `;
 
 const HamburgerBar = styled.div`
@@ -55,13 +64,13 @@ const Header = () => {
           <LogoImage src={logo} />
         </a>
       </LogoDiv>
-      <div>
-        <div>
+      <HamburgerContainer>
+        <HamburgerButton>
           <BarOne></BarOne>
           <BarTwo></BarTwo>
           <BarThree></BarThree>
-        </div>
-      </div>
+        </HamburgerButton>
+      </HamburgerContainer>
     </HeaderContainer>
   );
 };
